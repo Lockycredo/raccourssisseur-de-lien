@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<title> lien </title>
+<body>
+    
+    <form method="post" action="{{ url_for('index') }}">
+    <input type="text" name="long_url" placeholder="entre le lien" required>
+    <button type="submit">reduire</button>
+    </form>
+</body>
+</html>
