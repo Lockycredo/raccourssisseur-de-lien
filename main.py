@@ -27,9 +27,10 @@ def redirect_to_long_url(short_url):
         return redirect(long_url)
     return "URL not found", 404
 if __name__ == '__main__':
-    try:
-        with open('shortened_urls.json', 'r') as f:
+        try:
+            with open('shortened_urls.json', 'r') as f:
             shortened_urls = json.load(f)
-    except FileNotFoundError:
-        shortened_urls = {}
-  app.run(host='0.0.0.0',port=5000)
+        except FileNotFoundError:
+            shortened_urls = {}
+         app.run(host='0.0.0.0',port=5000)
+
