@@ -29,8 +29,9 @@ def redirect_to_long_url(short_url):
 if __name__ == '__main__':
         try:
             with open('shortened_urls.json', 'r') as f:
-            shortened_urls = json.load(f)
+                shortened_urls = json.load(f)
         except FileNotFoundError:
             shortened_urls = {}
          app.run(host='0.0.0.0',port=5000)
+
 
